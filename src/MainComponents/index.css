@@ -1,0 +1,105 @@
+
+[data-theme='dark']{
+--card-bg:hsl(226, 25%, 17%);
+--title-color:white;
+--remove-bg:hsl(226, 24%, 27%);
+--border-color:rgba(255, 255, 255, 0.146);
+
+}
+[data-theme='light'] {
+--card-bg:white;
+--title-color:hsl(226, 25%, 17%);
+--remove-bg:white;
+--border-color:#ccc;
+
+
+}
+.card{
+    height: 210px;
+    background-color:var(--card-bg); 
+    padding: 14px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border:1px solid rgba(255, 255, 255, 0.146);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.257);  
+
+}
+.headerIconText{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding:0px 5px;
+}
+.img-main{
+    height:60px ;
+    margin-top: 3px;
+}
+
+.title-article h4{
+    color: var(--title-color);
+}
+.title-article p{
+    color: hsl(0, 0%, 78%);
+    font-size: 14px;
+}
+.btn-on-off{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0px 5px;
+}
+.toggle-checkbox{
+    appearance: none;
+}
+.toggle-switch {
+    background-color: hsl(226, 11%, 37%);
+    width: 45px;
+    height: 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.toggle-switch::before {
+    content: "";
+    position: absolute;
+    background-color: #eee;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    top: 3px;
+    left: 4px;
+    transition: 0.3s;
+}
+
+.toggle-checkbox:checked+.toggle-switch {
+    background-color:hsl(3, 71%, 56%) ;
+}
+
+.toggle-checkbox:checked+.toggle-switch::before {
+    left: 24px
+}
+
+.btn-remove{
+    padding: 8px 14px;
+    border-radius: 16px;
+    border:1px solid var(--border-color);
+    background-color: var(--remove-bg);
+    color: var(--title-color);
+    margin-left: 8px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.btn-remove:focus{
+    border: 2px solid hsl(3, 86%, 64%);
+}
+.btn-remove:hover{
+        background-color:hsl(3, 71%, 56%) ;
+        transition: 0.3s;
+}
+

@@ -1,0 +1,77 @@
+
+[data-theme='dark']{
+
+    --bg-color-btn:hsl(226, 24%, 27%);
+    --color:white;
+    --btn-color:hsl(226, 25%, 17%);
+    --color-hover:hsl(226, 11%, 37%);
+
+}
+[data-theme='light'] {
+
+    --bg-color-btn:white;
+    --color:hsl(226, 25%, 17%);
+    --btn-color:white;
+    --color-hover:hsla(222, 4%, 54%, 0.548);
+
+
+}
+.exe {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    color: white;
+    margin-top: 25px;
+}
+
+.btn {
+    padding: 8px 14px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.146);
+    background-color: var(--bg-color-btn);
+    color: var(--color);
+    margin-left: 8px;
+    font-weight: 400;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.216);  
+
+}
+.btn:focus{
+    border: 2px solid hsl(3, 86%, 64%);
+}
+
+.btn:hover {
+    background-color: var(--color-hover);
+    transition: 0.3s;
+}
+
+.active {
+    background-color:hsl(3, 71%, 56%);
+    color: var(--btn-color);
+    border: none;
+    font-weight: bold;
+}
+
+.btn.active:hover {
+    background-color: hsl(3, 71%, 56%);
+    color: hsl(227, 75%, 14%);
+    border: none;
+    font-weight: bold;
+}
+
+.exe h3{
+    color: var(--color);
+}
+@media (max-width:425px) {
+    .exe {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        padding: 12px;
+        color: white;
+        margin-top: 15px;
+        font-size: 20px;
+    }
+}
